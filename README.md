@@ -25,7 +25,7 @@ php artisan serve
 
 ## Errores frecuentes
 
-Si existe un error al realizar `php artisan serve`  es probable que no se haya descargado `server.php`  por lo que se deberá agregar manualmente.
+Si existe un error al realizar `php artisan serve`  es probable que el antivirus haya bloqueado `server.php` . Ver de quitarlo de cuarentena.
 
 ```php
 //<?php
