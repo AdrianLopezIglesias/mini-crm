@@ -25,7 +25,7 @@
             <td>
                 <a href="/empresas/{{ $empleado->empleador->id }}">
                     <p>{{ $empleado->empleador->nombre }}</p>
-                    <p><img src="{{ url('/storage/').'/'. $empleado->empleador->logotipo }}" style="width: 400px">
+                    <p><img src="{{ url('/uploads/').'/'. $empleado->empleador->logotipo }}" style="width: 400px">
                     </p>
                 </a>
             </td>
