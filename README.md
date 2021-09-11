@@ -25,6 +25,7 @@ php artisan serve
 
 ## Errores frecuentes
 
+<<<<<<< HEAD
 Si existe un error al realizar `php artisan serve`  es probable que no se haya descargado `server.php`  por lo que se deberá agregar manualmente.
 
 ```php
@@ -50,3 +51,7 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
 
 require_once __DIR__.'/public/index.php';
 ```
+=======
+Si existe un error al realizar `php artisan serve`  es probable que el antivirus haya bloqueado `server.php` . Ver de quitarlo de cuarentena.
+
+>>>>>>> 9df49a2748e06b443a2f61534185716b69b835f0
