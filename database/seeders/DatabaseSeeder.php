@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Facades\Hash;
 
+
 use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
@@ -21,9 +22,9 @@ class DatabaseSeeder extends Seeder
 
         foreach (range(1, 50) as $index) {
             DB::table('empresas')->insert([
-                'nombre' => $faker->firstname,
+                'nombre' => $faker->company,
                 'email' => $faker->email,
-                'logotipo' => "/storage/".$faker->numberBetween($min = 1, $max = 5) . ".jpg",
+                'logotipo' => $faker->numberBetween($min = 1, $max = 5) . ".jpg",
             ]);
         }
 

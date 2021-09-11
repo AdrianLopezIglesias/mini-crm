@@ -55,7 +55,7 @@ public function __construct(){
 
         $empresa = new Empresa();
         if($request->file('logotipo')){
-            $empresa->logotipo = $request->file('logotipo')->store('', ['disk' => 'public']);
+            $empresa->logotipo = $request->file('logotipo')->store('', ['disk' => 'local']);
         }
         $empresa->nombre = $request->nombre;
         $empresa->email = $request->email;

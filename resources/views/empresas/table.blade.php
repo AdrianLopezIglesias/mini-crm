@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ $empresa->nombre }}</td>
                 <td>{{ $empresa->email }}</td>
-                <td><img src="{{ $empresa->logotipo}}" style="width: 100px; height: 100px; object-fit: cover"></td>
+                <td><img src="/storage/{{ $empresa->logotipo}}" style="width: 100px; height: 100px; object-fit: cover"></td>
                 <td>{{ $empresa->sitioweb }}</td>
                 <td width="120">
                     <div class='btn-group'>

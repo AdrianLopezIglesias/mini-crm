@@ -5,13 +5,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Empleados</h1>
+                    <h1>{{__("t.empleados")}}</h1>
                 </div>
                 @auth
                 <div class="col-sm-6">
                     <a class="btn btn-primary float-right"
                        href="{{ route('empleados.create') }}">
-                        Add New
+                        {{__("t.nuevo")}}
                     </a>
                 </div>
                 @endauth

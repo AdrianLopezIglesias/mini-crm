@@ -22,12 +22,9 @@
 
 <!-- Logotipo Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('logotipo', 'Logotipo:') !!}
     <div class="input-group">
-        <div class="custom-file">
             <label for="logotipo">{{__('t.logotipo')}}</label>
-            {!! Form::label('logotipo', 'Choose file', ['class' => 'custom-file-label']) !!}
-        </div>
+            <input type="file" class="form-control-file" id="logotipo" name="logotipo">
     </div>
 </div>
 <div class="clearfix"></div>

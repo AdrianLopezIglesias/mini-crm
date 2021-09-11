@@ -1,42 +1,41 @@
-<!-- Id Field -->
-<div class="col-sm-12">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{{ $empresa->id }}</p>
-</div>
 
-<!-- Nombre Field -->
-<div class="col-sm-12">
-<label for="nombre">{{__('t.nombre')}}</label>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>ID</td>
+            <td>{{ $empresa->id }}</td>
+        </tr>
+        <tr>
+            <td>{{__('t.nombre')}}</td>
+            <td>{{$empresa->nombre }}</td>
+        </tr>
+        <tr>
+            <td>{{__('t.email')}}</td>
+            <td>{{ $empresa->email }}</td>
+        </tr>
+        <tr>
+            <td>{{__('t.web')}}</td>
+            <td>{{ $empresa->sitioweb }}</td>
+        </tr>
+        <tr>
+            <td>{{__('t.logotipo')}}</td>
+            <td><p><img src="{{ url('/storage/').'/'. $empresa->logotipo }}" style="width: 50%; object-fit: cover"></p></td>
+        </tr>
+        <tr>
+            <td>{{__('t.empleados')}}</td>
+<td>
+@foreach ($empresa->empleados as $empleado)
 
-    <p>{{ $empresa->nombre }}</p>
-</div>
+    <p><a href="/empleados/{{$empleado->id}}">{{$empleado->nombre}} {{$empleado->apellido}}</a></p>
 
-<!-- Email Field -->
-<div class="col-sm-12">
-<label for="email">{{__('t.email')}}</label>
+@endforeach
+</td>
+        </tr>
+    </tbody>
+</table>
 
-    <p>{{ $empresa->email }}</p>
-</div>
-
-<!-- Logotipo Field -->
-<div class="col-sm-12">
-<label for="logotipo">{{__('t.logotipo')}}</label>
-
-    <p><img src="{{ url('/').'/' . $empresa->logotipo }}" style="width: 50%; object-fit: cover"></p>
-</div>
-
-<!-- Sitioweb Field -->
-<div class="col-sm-12">
-<label for="sitioweb">{{__('t.sitioweb')}}</label>
 
     <p>{{ $empresa->sitioweb }}</p>
 </div>
-@foreach ($empresa->empleados as $empleado)
 
-<div class="col-sm-12">
-    <p>{{__('t.empleados')}}</p>
 
-    <a href="/empleados/{{$empleado->id}}">{{$empleado->nombre}} {{$empleado->apellido}}</a>
-</div>
-
-@endforeach
