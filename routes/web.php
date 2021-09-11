@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->action([App\Http\Controllers\EmpresaController::class, 'index']);
 });
 
 Auth::routes([
@@ -22,3 +22,5 @@ Auth::routes([
     'reset' => false, // Password Reset Routes...
 ]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('empresas', App\Http\Controllers\EmpresaController::class);
+Route::resource('empleados', App\Http\Controllers\EmpleadoController::class);
