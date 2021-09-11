@@ -10,13 +10,13 @@
 
 <!-- Nombre Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('nombre', 'Nombre:') !!}
+    <label for="nombre">{{__('t.nombre')}}</label>
     {!! Form::text('nombre', null, ['class' => 'form-control','maxlength' => 255,'minlength' => 5, 'required']) !!}
 </div>
 
 <!-- Email Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('email', 'Email:') !!}
+    <label for="email">{{__('t.email')}}</label>
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -25,7 +25,7 @@
     {!! Form::label('logotipo', 'Logotipo:') !!}
     <div class="input-group">
         <div class="custom-file">
-            {!! Form::file('logotipo', ['class' => 'custom-file-input']) !!}
+            <label for="logotipo">{{__('t.logotipo')}}</label>
             {!! Form::label('logotipo', 'Choose file', ['class' => 'custom-file-label']) !!}
         </div>
     </div>
@@ -35,6 +35,6 @@
 
 <!-- Sitioweb Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('sitioweb', 'Sitioweb:') !!}
+    <label for="sitioweb">{{__('t.sitioweb')}}</label>
     {!! Form::text('sitioweb', null, ['class' => 'form-control']) !!}
 </div>

@@ -6,25 +6,27 @@
 
 <!-- Nombre Field -->
 <div class="col-sm-12">
-    {!! Form::label('nombre', 'Nombre:') !!}
+<label for="nombre">{{__('t.nombre')}}</label>
     <p>{{ $empleado->nombre }}</p>
 </div>
 <div class="col-sm-12">
-    {!! Form::label('apellido', 'Apellido:') !!}
+<label for="apellido">{{__('t.apellido')}}</label>
     <p>{{ $empleado->apellido }}</p>
 </div>
 
 <!-- Email Field -->
 <div class="col-sm-12">
-    {!! Form::label('email', 'Email:') !!}
+<label for="email">{{__('t.email')}}</label>
     <p>{{ $empleado->email }}</p>
 </div>
 <div class="col-sm-12">
-    {!! Form::label('telefono', 'Telefono:') !!}
+<label for="telefono">{{__('t.telefono')}}</label>
+
     <p>{{ $empleado->telefono }}</p>
 </div>
 <div class="col-sm-12">
-    {!! Form::label('empleador', 'Empleador:') !!}
+<label for="empleador">{{__('t.empleador')}}</label>
+
     <a href="/empresas/{{ $empleado->empleador->id }}">
         <p>{{ $empleado->empleador->nombre }}</p>
 

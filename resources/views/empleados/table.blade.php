@@ -5,12 +5,12 @@
     <table class="table" id="empleados-table">
         <thead>
             <tr>
-                <th>Empleador</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Telefono</th>
-                <th colspan="3">Action</th>
+                <th>{{ __('t.empleador') }}</th>
+                <th>{{ __('t.nombre') }}</th>
+                <th>{{ __('t.apellido') }}</th>
+                <th>{{ __('t.email') }}</th>
+                <th>{{ __('t.telefono') }}</th>
+                <th colspan="3">{{ __('t.accion') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -25,12 +25,12 @@
                     <div class='btn-group'>
                         <a href="{{ route('empleados.show', [$empleado->id]) }}"
                             class='btn btn-outline-secondary btn-xs'>
-                            <span>View</span>
+                            <span>{{ __('t.ver') }}</span>
                         </a>
                         @auth
                         <a href="{{ route('empleados.edit', [$empleado->id]) }}"
                             class='btn btn-outline-secondary btn-xs'>
-                            <span>Edit</span>
+                            <span>{{ __('t.editar') }}</span>
                         </a>
                         {!! Form::open(['route' => ['empleados.destroy', $empleado->id], 'method' => 'delete']) !!}
                         {!! Form::button('<span>Delete</span>', ['type' => 'submit', 'class' => 'btn btn-outline-danger

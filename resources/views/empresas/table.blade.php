@@ -5,11 +5,11 @@
     <table class="table" id="empresas-table">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Logotipo</th>
-                <th>Sitioweb</th>
-                <th colspan="3">Action</th>
+                <th>{{ __('t.nombre') }}</th>
+                <th>{{ __('t.email') }}</th>
+                <th>{{ __('t.logotipo') }}</th>
+                <th>{{ __('t.web') }}</th>
+                <th colspan="3">{{ __('t.accion') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -22,11 +22,11 @@
                 <td width="120">
                     <div class='btn-group'>
                         <a href="{{ route('empresas.show', [$empresa->id]) }}" class='btn btn-outline-secondary btn-xs'>
-                            <span>View</span>
+                            <span>{{ __('t.ver') }}</span>
                         </a>
                         @auth
                         <a href="{{ route('empresas.edit', [$empresa->id]) }}" class='btn btn-outline-secondary btn-xs'>
-                            <span>Edit</span>
+                            <span>{{ __('t.editar') }}</span>
                         </a>
                         {!! Form::open(['route' => ['empresas.destroy', $empresa->id], 'method' => 'delete']) !!}
                         {!! Form::button('<span>Delete</span>', ['type' => 'submit', 'class' => 'btn btn-outline-danger

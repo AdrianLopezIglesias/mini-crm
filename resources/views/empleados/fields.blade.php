@@ -10,11 +10,11 @@
 
 <!-- Nombre Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('nombre', 'Nombre:') !!}
+<label for="nombre">{{__('t.nombre')}}</label>
     {!! Form::text('nombre', null, ['class' => 'form-control','maxlength' => 255,'minlength' => 2, 'required']) !!}
 </div>
 <div class="form-group col-sm-12">
-    {!! Form::label('apellido', 'Apellido:') !!}
+<label for="apellido">{{__('t.apellido')}}</label>
     {!! Form::text('apellido', null, ['class' => 'form-control','maxlength' => 255,'minlength' => 2, 'required']) !!}
 </div>
 
@@ -25,7 +25,7 @@ $empresas->prepend('Seleccionar empresa', '');
 ?>
 
 <div class="form-group col-sm-12">
-    {!! Form::label('empresa', 'Empresa') !!}
+<label for="empresa">{{__('t.empresa')}}</label>
     {!! Form::select('empresa', $empresas, $empleado->empresa, ['class' => 'form-control']) !!}
 </div>
 
@@ -33,10 +33,10 @@ $empresas->prepend('Seleccionar empresa', '');
 
 <!-- Email Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('email', 'Email:') !!}
+<label for="email">{{__('t.email')}}</label>
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 <div class="form-group col-sm-12">
-    {!! Form::label('telefono', 'Telefono:') !!}
+<label for="telefono">{{__('t.telefono')}}</label>
     {!! Form::text('telefono', null, ['class' => 'form-control']) !!}
 </div>

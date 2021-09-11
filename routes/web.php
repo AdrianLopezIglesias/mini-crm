@@ -21,6 +21,11 @@ Auth::routes([
     'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
 ]);
+Route::group(['middleware'=>'language'], function() {
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('empresas', App\Http\Controllers\EmpresaController::class);
 Route::resource('empleados', App\Http\Controllers\EmpleadoController::class);
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
+});
